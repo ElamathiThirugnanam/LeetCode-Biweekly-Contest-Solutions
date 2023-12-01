@@ -1,1 +1,25 @@
-
+class Solution {
+    public int minOperations(List<Integer> nums, int k) 
+    {
+        Set<Integer> s1=new HashSet<>();
+        int count=0,index=nums.size();
+        for(int i=index-1;i>=0;i--)
+        {
+            if(s1.size()==k)
+            {
+                return count;
+            }
+            else if(!s1.contains(nums.get(i)) && nums.get(i)<=k)
+            {
+                s1.add(nums.get(i));
+                
+            }
+            count++;
+        }
+         if(s1.size()==k)
+            {
+                return count;
+            }
+        return -1;
+    }
+}
