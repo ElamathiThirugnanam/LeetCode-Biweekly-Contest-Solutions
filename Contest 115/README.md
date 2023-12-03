@@ -1,5 +1,5 @@
 # Biweekly Contest 115
-Hello people! Here you will find my solution for the contest problems.
+Hello people! Here you will find my java solution for the contest problems.
 
 ## Contest Information
 
