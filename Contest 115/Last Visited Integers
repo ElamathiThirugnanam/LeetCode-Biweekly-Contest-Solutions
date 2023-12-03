@@ -1,0 +1,29 @@
+class Solution {
+    public List<Integer> lastVisitedIntegers(List<String> words) 
+    {
+        List<Integer> ind=new ArrayList<>();
+        List<Integer> result=new ArrayList<>();
+        int k=0;
+        for(int i=0;i<words.size();i++)
+        {
+            String str=words.get(i);
+            if(!str.equals("prev"))
+            {
+                ind.add(Integer.parseInt(str));
+                k=0;
+            }
+            else if(k>=ind.size() || ind.size()==0)
+            {
+                result.add(-1);
+                k++;
+            }
+            else
+            {
+                int n=ind.size()-1;
+                result.add(ind.get(n-k));
+                k++;
+            }
+        }
+        return result;
+    }
+}
